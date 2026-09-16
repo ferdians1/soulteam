@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Soull — Portfolio</title>
+    <title>SOULL TEAM — Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -12,161 +12,235 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <a href="#home" class="logo">SOULL<span>.</span></a>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-        <nav>
-            <a href="#home">Home</a>
+    <header class="navbar">
+
+        <a href="#home" class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <img src="assets/logo.png" alt="SOULL Logo" style="height: 28px; width: auto; object-fit: contain;">
+            SOULL<span>.</span>
+        </a>
+
+        <nav class="desktop-nav">
+
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+
         </nav>
 
-        <button class="menu-btn" id="menuBtn">
-            ☰
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
+
     </header>
 
 
     <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-nav" id="mobileNav">
+
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
     </div>
 
 
-    <!-- HOME -->
-    <section id="home" class="hero section">
+    <!-- =========================
+         HERO
+    ========================== -->
 
-        <div class="hero-content">
+    <section
+        id="home"
+        class="hero"
+    >
 
-            <p class="small-text">
-                HELLO
-            </p>
+        <!-- BACKGROUND -->
 
-            <h1>
-                SOULL TEAM
-            </h1>
+        <div class="hero-background"></div>
 
-            <h2>
-                Web Developer & Creative Builder
-            </h2>
+        <!-- DARK OVERLAY -->
 
-            <p class="hero-description">
-                Saya membuat website modern, aplikasi digital,
-                dan berbagai project yang menggabungkan teknologi
-                dengan desain yang sederhana dan nyaman digunakan.
-                Serta pengembangan game 3D & 2D dengan menggunakan godot engine
-            </p>
+        <div class="hero-overlay"></div>
 
-            <div class="hero-buttons">
 
-                <a href="#projects" class="btn primary">
-                    Lihat Project
-                </a>
+        <!-- CONTENT -->
 
-                <a href="#contact" class="btn secondary">
-                    contact
-                </a>
+        <div class="hero-container">
 
-            </div>
+            <!-- LEFT -->
 
-        </div>
+            <div class="hero-content">
 
-        <div class="hero-visual">
-
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-
-            <div class="profile-card">
-
-                <div class="profile-icon">
-                    S
-                </div>
-
-                <h3>
-                    Creative Developer
-                </h3>
-
-                <p>
-                    Build • Design • Create
+                <p class="hero-label">
+                    HELLO
                 </p>
 
+                <h1 class="hero-title">
+                    SOULL
+                    <br>
+                    TEAM
+                </h1>
+
+                <h2 class="hero-subtitle">
+                    Web Developer &amp; Creative Builder
+                </h2>
+
+                <p class="hero-description">
+                    Saya membuat website modern, aplikasi digital,
+                    dan berbagai project yang menggabungkan teknologi
+                    dengan desain yang sederhana dan nyaman digunakan.
+                    Serta pengembangan game 3D &amp; 2D dengan
+                    menggunakan Godot Engine.
+                </p>
+
+
+                <!-- BUTTONS -->
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn"
+                    >
+                        Lihat Project
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="hero-visual">
+
+                <!-- SQUARE FRAME -->
+
+                <div class="visual-frame">
+
+                    <!-- RINGS -->
+
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+
+                    <!-- GLOW -->
+
+                    <div class="visual-glow"></div>
+
+
+                    <!-- PROFILE CARD -->
+
+                    <div class="profile-card">
+
+                        <div class="profile-avatar" style="overflow: hidden; padding: 2px;">
+                            <img src="assets/logo.png" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+
+                        <h3>
+                            Creative Developer
+                        </h3>
+
+                        <p>
+                            Build • Design • Create
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
-        <a href="#about" class="scroll-down">
+
+        <!-- SCROLL -->
+
+        <a
+            href="#about"
+            class="scroll-indicator"
+        >
+
             <span></span>
+
             Scroll kebawah
+
         </a>
 
     </section>
 
 
-    <!-- ABOUT -->
-    <section id="about" class="section about">
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-        <div class="section-title">
-            <p>ABOUT WE</p>
-            <h2>Tentang kami</h2>
+    <section
+        id="about"
+        class="section about-section"
+    >
+
+        <div class="section-heading">
+
+            <span>
+                ABOUT
+            </span>
+
+            <h2>
+                Tentang Saya
+            </h2>
+
         </div>
 
         <div class="about-grid">
 
-            <div class="about-text">
+            <div>
 
                 <h3>
-                    Kami suka membuat sesuatu
-                    dari ide menjadi nyata bahkan akan kami implementasikan kedalam sebuah video game.
+                    Mengubah ide menjadi
+                    sesuatu yang nyata.
                 </h3>
-
-                <p>
-                    Kami tertarik dengan pengembangan website,
-                    aplikasi, desain interface, game, dan teknologi
-                    digital.
-                </p>
-
-                <p>
-                    Setiap project adalah kesempatan untuk belajar,
-                    bereksperimen dan menciptakan sesuatu yang
-                    lebih baik.
-                </p>
-
-                <a href="#contact" class="text-link">
-                    Mari bekerja sama →
-                </a>
 
             </div>
 
-            <div class="about-stats">
+            <div>
 
-                <div class="stat">
-                    <strong>10+</strong>
-                    <span>Projects</span>
-                </div>
+                <p>
+                    Saya tertarik pada pengembangan website,
+                    aplikasi digital, desain interface,
+                    teknologi cloud dan pengembangan game.
+                </p>
 
-                <div class="stat">
-                    <strong>3+</strong>
-                    <span>Technologies</span>
-                </div>
-
-                <div class="stat">
-                    <strong>100%</strong>
-                    <span>Passion</span>
-                </div>
+                <p>
+                    Fokus saya adalah membuat sesuatu yang
+                    terlihat modern sekaligus nyaman digunakan.
+                </p>
 
             </div>
 
@@ -175,116 +249,89 @@
     </section>
 
 
-    <!-- SKILLS -->
-    <section id="skills" class="section skills">
+    <!-- =========================
+         SKILLS
+    ========================== -->
 
-        <div class="section-title">
-            <p>WE SKILLS</p>
-            <h2>Keahlian</h2>
+    <section
+        id="skills"
+        class="section skills-section"
+    >
+
+        <div class="section-heading">
+
+            <span>
+                SKILLS
+            </span>
+
+            <h2>
+                Keahlian
+            </h2>
+
         </div>
 
         <div class="skills-grid">
 
             <div class="skill-card">
 
-                <span class="skill-number">
-                    01
-                </span>
+                <small>01</small>
 
                 <h3>
                     HTML
                 </h3>
 
                 <p>
-                    Membuat struktur website yang rapi,
-                    semantik dan responsive.
+                    Struktur website modern
+                    dan semantik.
                 </p>
-
-                <div class="progress">
-                    <div style="width: 90%;"></div>
-                </div>
-
-                <span class="percentage">
-                    90%
-                </span>
 
             </div>
 
 
             <div class="skill-card">
 
-                <span class="skill-number">
-                    02
-                </span>
+                <small>02</small>
 
                 <h3>
                     CSS
                 </h3>
 
                 <p>
-                    Membuat interface modern dengan
-                    animasi dan responsive design.
+                    Responsive design,
+                    animation dan visual.
                 </p>
-
-                <div class="progress">
-                    <div style="width: 85%;"></div>
-                </div>
-
-                <span class="percentage">
-                    85%
-                </span>
 
             </div>
 
 
             <div class="skill-card">
 
-                <span class="skill-number">
-                    03
-                </span>
+                <small>03</small>
 
                 <h3>
                     JavaScript
                 </h3>
 
                 <p>
-                    Menambahkan interaksi dan berbagai
-                    fungsi pada website.
+                    Interaksi dan fungsi
+                    website.
                 </p>
-
-                <div class="progress">
-                    <div style="width: 75%;"></div>
-                </div>
-
-                <span class="percentage">
-                    75%
-                </span>
 
             </div>
 
 
             <div class="skill-card">
 
-                <span class="skill-number">
-                    04
-                </span>
+                <small>04</small>
 
                 <h3>
-                    Cloud
+                    Godot
                 </h3>
 
                 <p>
-                    Deployment website dan project
-                    menggunakan platform cloud.
+                    Eksperimen pengembangan
+                    game 2D dan 3D.
                 </p>
-
-                <div class="progress">
-                    <div style="width: 70%;"></div>
-                </div>
-
-                <span class="percentage">
-                    70%
-                </span>
 
             </div>
 
@@ -293,164 +340,107 @@
     </section>
 
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects">
+    <!-- =========================
+         PROJECTS
+    ========================== -->
 
-        <div class="section-title">
-            <p>WE WORK</p>
-            <h2>Project KAMI</h2>
+    <section
+        id="projects"
+        class="section projects-section"
+    >
+
+        <div class="section-heading">
+
+            <span>
+                PROJECTS
+            </span>
+
+            <h2>
+                Project Saya
+            </h2>
+
         </div>
 
         <div class="project-grid">
 
-
             <article class="project-card">
-
-                <div class="project-image project-one">
-                    <span>01</span>
+                <div class="project-image">
+                    <img src="assets/project_umkm.png" alt="Stock UMKM">
                 </div>
-
                 <div class="project-content">
-
-                    <small>
-                        WEB APPLICATION
-                    </small>
-
-                    <h3>
-                        Warehouse Management
-                    </h3>
-
+                    <div class="project-header">
+                        <small>UMKM APP</small>
+                        <div class="project-number">01</div>
+                    </div>
+                    <h3>Stock UMKM</h3>
                     <p>
-                        Sistem pengelolaan warehouse dengan
-                        transaksi barang masuk dan keluar,
-                        database dan dashboard.
+                        Sistem pengelolaan stok barang untuk bisnis UMKM dengan dashboard lengkap.
                     </p>
-
-                    <a href="#">
-                        View Project →
-                    </a>
-
                 </div>
-
             </article>
 
 
             <article class="project-card">
-
-                <div class="project-image project-two">
-                    <span>02</span>
+                <div class="project-image">
+                    <img src="assets/project_kasir_pos.png" alt="POS Kasir">
                 </div>
-
                 <div class="project-content">
-
-                    <small>
-                        WEB DESIGN
-                    </small>
-
-                    <h3>
-                        Modern Dashboard
-                    </h3>
-
+                    <div class="project-header">
+                        <small>POINT OF SALE</small>
+                        <div class="project-number">02</div>
+                    </div>
+                    <h3>POS Kasir</h3>
                     <p>
-                        Dashboard modern dengan fokus pada
-                        interface yang bersih dan mudah digunakan.
+                        Aplikasi kasir untuk manajemen penjualan dan pencatatan transaksi harian.
                     </p>
-
-                    <a href="#">
-                        View Project →
-                    </a>
-
                 </div>
-
             </article>
 
-             <article class="project-card">
-
-                <div class="project-image project-two">
-                    <span>03</span>
-                </div>
-
-                <div class="project-content">
-
-                    <small>
-                        GAME
-                    </small>
-
-                    <h3>
-                        3D and 2D Game
-                    </h3>
-
-                    <p>
-                        Game yang sedang kami kembangkan adalah
-                        game yang berbasis petualangan, teka-teki,
-                        aksi, dan yang lainnya
-                    </p>
-
-                    <a href="#">
-                        View Project →
-                    </a>
-
-                </div>
-
-            </article>
 
             <article class="project-card">
-
-                <div class="project-image project-three">
-                    <span>04</span>
+                <div class="project-image">
+                    <img src="assets/project_financial.png" alt="Financial App">
                 </div>
-
                 <div class="project-content">
-
-                    <small>
-                        WEB APP
-                    </small>
-
-                    <h3>
-                        POS System
-                    </h3>
-
+                    <div class="project-header">
+                        <small>FINANCE APP</small>
+                        <div class="project-number">03</div>
+                    </div>
+                    <h3>Financial App</h3>
                     <p>
-                        Sistem Point of Sale untuk membantu
-                        pengelolaan penjualan dan transaksi.
+                        Aplikasi pencatatan keuangan dengan laporan analitik yang interaktif.
                     </p>
-
-                    <a href="#">
-                        View Project →
-                    </a>
-
                 </div>
-
             </article>
-
 
         </div>
 
     </section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
-        <div class="contact-content">
+    <section
+        id="contact"
+        class="section contact-section"
+    >
 
-            <p class="small-text">
+        <div class="contact-box">
+
+            <span>
                 GET IN TOUCH
-            </p>
+            </span>
 
             <h2>
-                Mari membuat sesuatu
-                yang keren bersama kami.
+                Let's build
+                something together.
             </h2>
-
-            <p>
-                Punya project atau ide?
-                Jangan ragu untuk menghubungi kami.
-            </p>
 
             <a
                 href="mailto:youremail@example.com"
-                class="btn primary"
+                class="btn contact-button"
             >
                 Contact Me
             </a>
@@ -460,22 +450,19 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
-        <div class="footer-logo">
-            SOULL Team<span>.</span>
-        </div>
+        <strong>
+            SOULL<span>.</span>
+        </strong>
 
         <p>
-            © 2026 Soullteam. All rights reserved.
+            © 2026 Soull Team
         </p>
-
-        <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-        </div>
 
     </footer>
 

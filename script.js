@@ -1,61 +1,153 @@
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileNav =
+    document.getElementById("mobileNav");
 
 
+// ============================================
 // MOBILE MENU
+// ============================================
 
-menuBtn.addEventListener("click", () => {
+menuButton.addEventListener("click", () => {
 
-    mobileMenu.classList.toggle("active");
+    const isOpen =
+        mobileNav.style.display === "flex";
+
+    mobileNav.style.display =
+        isOpen ? "none" : "flex";
 
 });
 
 
-// CLOSE MOBILE MENU WHEN LINK CLICKED
+// CLOSE MENU WHEN LINK IS CLICKED
 
-const mobileLinks = document.querySelectorAll(".mobile-menu a");
+const mobileLinks =
+    document.querySelectorAll(".mobile-nav a");
 
 mobileLinks.forEach(link => {
 
     link.addEventListener("click", () => {
 
-        mobileMenu.classList.remove("active");
+        mobileNav.style.display = "none";
 
     });
 
 });
 
 
-// REVEAL ANIMATION
+// ============================================
+// SCROLL REVEAL
+// ============================================
 
-const observer = new IntersectionObserver(
-    entries => {
+const revealElements =
+    document.querySelectorAll(
+        ".section-heading, .about-grid, .skill-card, .project-card, .contact-box"
+    );
 
-        entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
 
-                entry.target.classList.add("show");
+            entries.forEach(entry => {
+
+                if (
+                    entry.isIntersecting
+                ) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    element.classList.add(
+        "reveal"
+    );
+
+    revealObserver.observe(
+        element
+    );
+
+});
+
+
+// ============================================
+// NAVBAR ACTIVE LINK
+// ============================================
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+const navLinks =
+    document.querySelectorAll(
+        ".desktop-nav a"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 160;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY <
+                sectionTop + sectionHeight
+            ) {
+
+                current =
+                    section.getAttribute("id");
 
             }
 
         });
 
-    },
-    {
-        threshold: 0.15
+        navLinks.forEach(link => {
+
+            link.classList.remove(
+                "active"
+            );
+
+            if (
+                link.getAttribute("href") ===
+                `#${current}`
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
     }
 );
-
-
-document
-    .querySelectorAll(
-        ".about-text, .stat, .skill-card, .project-card, .contact-content"
-    )
-    .forEach(element => {
-
-        element.classList.add("hidden");
-
-        observer.observe(element);
-
-    });
