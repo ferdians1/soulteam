@@ -808,9 +808,37 @@ a {
 ================================================== */
 
 .skills-section {
-    background:
-        #020d18;
+   positons: relative;
+   overflow: hidden;
+   background:
+      linear-gradient(
+         120deg,
+         #ffffff 0%,
+         #eaf8ff 22%,
+         #bfeaff 45%,
+         #7dd8ff 68%,
+         #dff6ff 85%,
+         #ffffff 100%
+      );
+   background-size: 300% 300%;
+   animation:
+      skillsGradient 14s ease infinite;
 }
+
+@keyframes skillsGradient {
+   0% {
+      background-position:  0% 50%;
+   }
+   50% {
+       background-position:  100% 50%;
+   }
+   100% {
+       background-position:  0% 50%;
+   }
+}
+
+
+
 
 .skills-grid {
     display: grid;
